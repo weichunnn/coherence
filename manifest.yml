@@ -1,0 +1,19 @@
+modules:
+  confluence:contentAction:
+    - key: keyword-extractor-hello-world
+      function: main
+      title: keyword-extractor
+  function:
+    - key: main
+      handler: index.run
+permissions:
+  scopes:
+    - 'write:confluence-content'
+    - 'write:label:confluence'
+    - 'read:page:confluence'
+  external:
+    fetch:
+      backend:
+        - 'api.openai.com'
+app:
+  id: ari:cloud:ecosystem::app/12a11f6a-a655-49c0-84f1-c7a0760686c3
